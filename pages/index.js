@@ -39,12 +39,7 @@ export default function Home({allPostsData}) {
           ))}
         </ul>
       </section>
-      <h1 className="title">
-        Check out {' '}
-          <Link href="/posts/first-post">
-            <a>The Cool Gentelman</a>
-          </Link>
-      </h1>
+
     </Layout>
   )
 }

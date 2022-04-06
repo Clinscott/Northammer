@@ -3,22 +3,28 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Button from './button';
 
 const name = 'Northammer';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Northammer - Home';
+const profilePic = {
+    width: 250,
+    height: 100
+}
 
 export default function Layout({children, home}){
     return(
-        <div className={styles.container}>
+        <div>
             <Head>
                 <link rel='icon' href="/favicon.ico" />
                 <meta 
                     name='description'
-                    content='Learn how to build a personal website using Next.js'
+                    content='The place for engaging and informative Warhammer content.'
                     />
                 <meta property='og:title' content={siteTitle}/>
                 <meta name='twitter:card' content='summary_large_image'/>
             </Head>
+            <div className={styles.fixed}>
             <header className={styles.header}>
                 {home ? (
                     <>
@@ -26,11 +32,10 @@ export default function Layout({children, home}){
                             priority
                             src="/images/profile.png"
                             className={utilStyles.borderCircle}
-                            height={144}
-                            width={288}
+                            height={profilePic.height}
+                            width={profilePic.width}
                             alt={name}
                         />
-                        <h1 className={utilStyles.heading2X1}>{name}</h1>
                     </>
                 ) : (
                     <>
@@ -40,22 +45,26 @@ export default function Layout({children, home}){
                                     priority
                                     src="/images/profile.png"
                                     className={utilStyles.borderCircle}
-                                    height={108}
-                                    width={216}
+                                    height={profilePic.height}
+                                    width={profilePic.width}
                                     alt={name}
                                     />
                             </a>
                         </Link>
-                        <h2 className={utilStyles.headingLg}>
-                            <Link href="/">
-                                <a className={utilStyles.colorInherit}>{name}</a>
-                            </Link>
-                        </h2>
+                        
                     </>
                 )}
-
             </header>
-                <main>{children}</main>
+            <div className={styles.fixed}>
+                <div className= {styles.line}>
+                    <Button title='40k' link="/posts/40k"></Button>
+                    <Button title='Fantasy' link="/posts/fantasy"></Button>
+                    <Button title='Cool Gentleman' link="/posts/coolGentleman"></Button>
+                </div>
+            </div>
+            </div>
+            <div className={styles.container}>
+                <main className={styles.main}>{children}</main>
                     {!home && (
                         <div className={styles.backToHome}>
                             <Link href="/">
@@ -63,6 +72,7 @@ export default function Layout({children, home}){
                             </Link>
                         </div>
                 )}
+                </div>
         </div>
     )
 }
