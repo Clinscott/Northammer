@@ -16,7 +16,7 @@ export default function Layout({children, home}){
     return(
         <div>
             <Head>
-                <link rel='icon' href="/favicon.ico" />
+                <link rel='icon' href="/northammerIcon.ico" />
                 <meta 
                     name='description'
                     content='The place for engaging and informative Warhammer content.'
