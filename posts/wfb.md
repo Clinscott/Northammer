@@ -1,7 +1,7 @@
 ---
 title: 'Warhammer Fantasy Battles'
+author: 'Craig Linscott'
 date: '2020-01-02'
-author: Craig Linscott
 ---
 
 Warhammer Fantasy Battles

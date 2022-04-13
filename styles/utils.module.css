@@ -1,4 +1,13 @@
-.heading2Xl {
+  .blogArticle {
+    box-sizing: border-box;
+    margin: 5% 10% 5%;
+  }
+  
+  .blogArticleContent {
+    text-align: left;
+  }
+  
+  .heading2Xl {
     font-size: 10rem;
     line-height: 1.2;
     font-weight: 800;

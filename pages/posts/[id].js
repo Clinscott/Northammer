@@ -9,14 +9,15 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
-        <address class={postData.author}><a rel="author" href="">{postData.author}</a></address>
+        <meta name='author' content={postData.author} />
       </Head>
-      <article>
+      <article className={utilStyles.blogArticle}>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText2}>
-          <Date dateString={postData.date} />
+        <address class={postData.author}><a rel="author" href="">{postData.author}</a></address>
+        <Date dateString={postData.date} />
         </div>
-        <div className={utilStyles.list} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className={utilStyles.blogArticleContent} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
   )
