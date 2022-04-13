@@ -9,6 +9,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <address class={postData.author}><a rel="author" href="">{postData.author}</a></address>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
