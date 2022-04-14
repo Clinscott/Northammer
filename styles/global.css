@@ -26,3 +26,9 @@ img {
   max-width: 100%;
   display: block;
 }
+
+p{
+  margin: 0%;
+  padding-left: 2%;
+  font-size: small;
+}

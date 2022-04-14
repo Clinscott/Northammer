@@ -1,10 +1,17 @@
   .blogArticle {
     box-sizing: border-box;
     margin: 5% 10% 5%;
+    background-color: rgb(190, 195, 199);
   }
   
   .blogArticleContent {
     text-align: left;
+  }
+
+  .founder{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1% 5% 5% 5%;
   }
   
   .heading2Xl {
@@ -65,4 +72,19 @@
   .lightText2{
     color: #666;
     text-align: center;
+  }
+
+  .rowC{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rowS{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:5%;
   }
