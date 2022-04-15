@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
+import Image from 'next/image';
 
 export async function getStaticProps(){
   const allPostsData = getSortedPostsData()
@@ -12,6 +13,11 @@ export async function getStaticProps(){
       allPostsData
     }
   }
+}
+
+const profilePic = {
+  width: 32,
+  height: 32
 }
 
 export default function Home({allPostsData}) {
@@ -23,7 +29,7 @@ export default function Home({allPostsData}) {
       <section className={utilStyles.headingMd}>
         <h6>We are Northammer! Together we look to provide exciting, engaging and informative Warhammer content.</h6>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blogArticle}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, author}) => (
@@ -32,6 +38,13 @@ export default function Home({allPostsData}) {
               <a>{title}</a>
             </Link>
             <br />
+            <a className={utilStyles.imageF}>
+                <Image
+                  src={author === 'Craig Linscott' ? '/images/NH-Craig.gif' : '/images/NH-Brad.gif'}
+                  width={profilePic.width}
+                  height={profilePic.height} 
+                />
+              </a>
             <small className={utilStyles.lightText}>
               <a className={utilStyles.lightText}>{author} </a>
               <Date dateString={date} />

@@ -11,8 +11,8 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
         <meta name='author' content={postData.author} />
       </Head>
+      <h1 className={utilStyles.headingXl}>{postData.title}</h1>
       <article className={utilStyles.blogArticle}>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText2}>
         <address class={postData.author}><a rel="author" href="">{postData.author}</a></address>
         <Date dateString={postData.date} />

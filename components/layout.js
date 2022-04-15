@@ -54,15 +54,15 @@ export default function Layout({children, home}){
                         
                     </>
                 )}
-            </header>
-            <div className={styles.fixed}>
+                </header>
+                <div className={styles.fixed}>
                 <div className= {styles.line}>
                     <Button title='40k' link="/posts/40k"></Button>
                     <Button title='Fantasy' link="/posts/fantasy"></Button>
                     <Button title='Cool Gentleman' link="/posts/coolGentleman"></Button>
                     <Button title='The Founders' link="/posts/theFounders"></Button>
                 </div>
-            </div>
+                </div>
             </div>
             <div className={styles.container}>
                 <main className={styles.main}>{children}</main>
