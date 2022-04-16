@@ -4,7 +4,7 @@
     background-color: rgb(190, 195, 199);
   }
 
-  .video {
+  .videoWrapper {
     display: flex;
     flex-direction: column;
     margin: 0% 10% 0% 10%;
@@ -12,8 +12,13 @@
     background-color: rgb(190, 195, 199);
     align-items: center;
     justify-content: center;
-    aspect-ratio: auto;
   }
+
+    .reactPlayer{
+      height: auto !important;
+      aspect-ratio: 16/9;
+    }
+  
   
   .blogArticleContent {
     text-align: left;
