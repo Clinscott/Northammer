@@ -9,6 +9,7 @@
     align-items: center;
     margin: 0;
     background-color: black;
+    z-index: 100;
   }
 
   .line {
@@ -22,9 +23,11 @@
 
   .fixed {
     position: sticky;
+    width: 100%;
     top: 0px;
     overflow: hidden;
     background-color: black;
+    z-index: 99;
   }
   
   .backToHome {

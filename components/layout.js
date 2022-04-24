@@ -36,6 +36,7 @@ export default function Layout({children, home}){
                             width={profilePic.width}
                             alt={name}
                         />
+                        
                     </>
                 ) : (
                     <>
