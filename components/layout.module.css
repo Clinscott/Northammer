@@ -1,6 +1,8 @@
 .container {
-    padding: 5px;
-    margin: 5px;
+    padding: 1%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(190, 195, 199);
   }
   
   .header {
@@ -19,6 +21,10 @@
     align-items: center;
     padding: 5px;
     justify-content: center
+  }
+
+  .main{
+    padding: 1%;
   }
 
   .fixed {

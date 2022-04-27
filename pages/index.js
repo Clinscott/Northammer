@@ -16,13 +16,13 @@ export async function getStaticProps(){
 }
 
 const profilePic = {
-  width: 32,
-  height: 32
+  width: 128,
+  height: 128
 }
 
 const founderImage = {
-  width: 128,
-  height: 128
+  width: 512,
+  height: 512
 }
 
 export default function Home({allPostsData}) {
@@ -42,7 +42,7 @@ export default function Home({allPostsData}) {
         styles={utilStyles.image}
         />
       <section className={utilStyles.headingMd}>
-        <h6>We are Northammer! Together we look to provide exciting, engaging and informative Warhammer content.</h6>
+        <h4>We are Northammer!<br/> Together we look to provide exciting, engaging and informative Warhammer content.</h4>
       </section>
       <Image
         priority
@@ -55,25 +55,30 @@ export default function Home({allPostsData}) {
         />
       </div>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px} ${utilStyles.blogArticle}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title, author}) => (
             <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <a className={utilStyles.imageF}>
+              <div className={utilStyles.rowC}>
+              <a className={utilStyles.imageF}>
                 <Image
                   src={author === 'Craig Linscott' ? '/images/NH-Craig.gif' : '/images/NH-Brad.gif'}
                   width={profilePic.width}
                   height={profilePic.height} 
                 />
               </a>
+              <div>
+            <Link href={`/posts/${id}`}>
+              <a>{title}</a>
+            </Link>
+            <br />
+            
             <small className={utilStyles.lightText}>
               <a className={utilStyles.lightText}>{author} </a>
               <Date dateString={date} />
             </small>
+            </div>
+            </div>
             </li>
           ))}
         </ul>

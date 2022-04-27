@@ -1,18 +1,17 @@
+import React, {useRef, useEffect} from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Button from './button';
-
-const name = 'Northammer';
+import Header from './header';
 export const siteTitle = 'Northammer - Home';
-const profilePic = {
-    width: 250,
-    height: 100
-}
+
+
 
 export default function Layout({children, home}){
+
     return(
         <div>
             <Head>
@@ -25,38 +24,11 @@ export default function Layout({children, home}){
                 <meta name='twitter:card' content='summary_large_image'/>
             </Head>
             <div className={styles.fixed}>
-            <header className={styles.header}>
-                {home ? (
-                    <>
-                        <Image 
-                            priority
-                            src="/images/profile.png"
-                            className={utilStyles.borderCircle}
-                            height={profilePic.height}
-                            width={profilePic.width}
-                            alt={name}
-                        />
-                        
-                    </>
-                ) : (
-                    <>
-                        <Link href="/">
-                            <a>
-                                <Image
-                                    priority
-                                    src="/images/profile.png"
-                                    className={utilStyles.borderCircle}
-                                    height={profilePic.height}
-                                    width={profilePic.width}
-                                    alt={name}
-                                    />
-                            </a>
-                        </Link>
-                        
-                    </>
-                )}
-                </header>
+            
                 <div className={styles.fixed}>
+                    <Header 
+                        home={home}
+                        />
                 <div className= {styles.line}>
                     <Button title='40k' link="/posts/40k"></Button>
                     <Button title='Fantasy' link="/posts/fantasy"></Button>

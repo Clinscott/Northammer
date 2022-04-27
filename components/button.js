@@ -3,7 +3,7 @@ import styles from './layout.module.css'
 
 export default function Button({title, link}){
     return(
-        <div className={styles.container}>
+        <div className={styles.main}>
             <Link href={link}>
             {title}
             </Link>
