@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Image from 'next/image';
+import Button from './button';
 
 
 const name = 'Northammer';
@@ -11,8 +12,8 @@ const profilePicStatic = {
     height: 275
 }
 const profilePicOnScroll= {
-    width: 250,
-    height: 100
+    width: 125,
+    height: 50
 }
 let profilePic = profilePicStatic
 
@@ -73,5 +74,11 @@ export default function Header(props){
                         
                     </>
                 )}
+                <div className= {styles.line}>
+                    <Button title='40k' link="/posts/40k"></Button>
+                    <Button title='Fantasy' link="/posts/fantasy"></Button>
+                    {/*<Button title='Cool Gentleman' link="/posts/coolGentleman"></Button>*/}
+                    <Button title='The Founders' link="/posts/theFounders"></Button>
+                </div>
                 </header>
     )}
