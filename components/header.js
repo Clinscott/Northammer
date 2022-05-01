@@ -25,7 +25,7 @@ export default function Header(props){
     useEffect(() => {
       function onScroll() {
         let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
-        if (currentPosition > scrollTop) {
+        if (currentPosition > 200) {
           console.log('Scrolling Down')
           profilePic = profilePicOnScroll
           setScrolling(false);
@@ -50,7 +50,6 @@ export default function Header(props){
                         <Image 
                             priority
                             src="/images/profile.png"
-                            className={utilStyles.borderCircle}
                             height={profilePic.height}
                             width={profilePic.width}
                             alt={name}
@@ -64,7 +63,6 @@ export default function Header(props){
                                 <Image
                                     priority
                                     src="/images/profile.png"
-                                    className={utilStyles.borderCircle}
                                     height={profilePic.height}
                                     width={profilePic.width}
                                     alt={name}

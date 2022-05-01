@@ -50,7 +50,7 @@ export default function Home({allPostsData}) {
         className={utilStyles.borderCircle}
         height={founderImage.height}
         width={founderImage.width}
-        alt='Brad Linscott'
+        alt='Bradley Linscott'
         styles={utilStyles.image}
         />
       </div>

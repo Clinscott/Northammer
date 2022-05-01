@@ -25,11 +25,9 @@ export default function Layout({children, home}){
             </Head>
             <div className={styles.fixed}>
             
-                <div className={styles.fixed}>
                     <Header 
                         home={home}
                         />
-                </div>
             </div>
             <div className={styles.container}>
                 <main className={styles.main}>{children}</main>
