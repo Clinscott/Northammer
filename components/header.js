@@ -25,7 +25,7 @@ export default function Header(props){
     useEffect(() => {
       function onScroll() {
         let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
-        if (currentPosition > 600) {
+        if (currentPosition > 200) {
           console.log('Scrolling Down')
           profilePic = profilePicOnScroll
           setScrolling(false);
