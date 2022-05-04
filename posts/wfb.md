@@ -1,7 +1,7 @@
 ---
-title: 'Warhammer Fantasy Battles'
-author: 'Craig Linscott'
-date: '2022-04-13'
+title: "Warhammer Fantasy Battles"
+author: "Craig Linscott"
+date: "2022-04-13"
 ---
 
 As a kid I loved anything mediaeval. Some of my earliest memories involved picking up a stick from the ground and clashing with my brothers or a friend. We were King Arthur and his knights of the round, or Robin Hood and I Little John. From here we progressed to Dungeons and Dragons and then finally, when old enough and allowance accumulated, Warhammer.
@@ -23,6 +23,3 @@ The community felt cheated, suddenly our well built cool armies were too small. 
 \
 \
 Now there are stirrings on the wind, whispers of a new promise land. I can see that shining knight once more charge across the land.
-
-
-
