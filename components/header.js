@@ -7,12 +7,12 @@ import Button from "./button";
 
 const name = "Northammer";
 const profilePicStatic = {
-  width: 750,
-  height: 275,
+  width: 768,
+  height: 256,
 };
 const profilePicOnScroll = {
-  width: 125,
-  height: 50,
+  width: 768,
+  height: 256,
 };
 let profilePic = profilePicStatic;
 
@@ -23,16 +23,21 @@ export default function Header(props) {
   useEffect(() => {
     function onScroll() {
       let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
-      if (currentPosition > 200) {
+      if (scrolling && currentPosition >= 100) {
         console.log("Scrolling Down");
         profilePic = profilePicOnScroll;
+        profilePicOnScroll.width -= 48;
+        profilePicOnScroll.height -= 16;
         setScrolling(false);
+
       } else {
         console.log("Scrolling Up");
         setScrolling(true);
       }
       if (currentPosition === 0) {
         profilePic = profilePicStatic;
+        profilePicOnScroll.height = 275;
+        profilePicOnScroll.width = 750;
       }
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
     }
