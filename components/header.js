@@ -29,7 +29,6 @@ export default function Header(props) {
         profilePicOnScroll.width -= 48;
         profilePicOnScroll.height -= 16;
         setScrolling(false);
-
       } else {
         console.log("Scrolling Up");
         setScrolling(true);
