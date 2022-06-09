@@ -15,6 +15,7 @@
 
 # production
 /build
+/server
 
 # misc
 .DS_Store
@@ -29,4 +30,3 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-./server/config.env
